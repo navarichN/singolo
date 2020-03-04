@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="singolo3.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap&subset=latin-ext" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body>
+  <main>
+    <section class = "quote">
+      <h2 class = "title">Get a Quote</h2>
+      <p class = "text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+      <div class="wrapper">
+        <form action="submission.html" method="POST">
+            <label for="username"></label>
+            <input type="text" name="username" id="username" placeholder="Name (Required)" required maxlength = "10" minlength = "3"> 
+            <label for="email"></label>
+            <input type="email" name="email" id="email" placeholder="Email (Required)" required maxlength = "30" minlength = "12">
+            <label for="subject"></label>
+            <input type="subject" name="subject" id="subject" placeholder="Subject">
+            <label for="describe"></label>
+            <textarea name="describe" id="describe" cols="80" rows="10" placeholder="Describe your project in detail..."></textarea>
+            <button type="submit">Submit</button>
+          </form>
+          <div class="contact-info">
+            <h3 class = "contact-info__title">Contact Information</h3>
+            <p class = "contact-info__text">Quisque hendrerit purus dapibus, ornare nibh vitae, viver-<br>ra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. 
+            </p>
+            <ul class="contacts">
+                <li class="contacts-item contacts-item__adress">Elm St. 14/05 Lost City</li>
+                <li class="contacts-item"><a href="tel:+" class = "contacts-item__number">03528 331 86 35</a></li> 
+                <li class="contacts-item"><a href="mailto:" class = "contacts-item__email">info@singolo.com</a></li>
+            </ul>
+          </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <h3>© Copyright 2013</h3>
+    <div class = "social">
+      <a href="#" class = "social-link social-link__facebook"></a>
+      <a href="#" class = "social-link social-link__google"></a>
+      <a href="#" class = "social-link social-link__twitter"></a>
+      <a href="#" class = "social-link social-link__linkedin"></a>
+    </div>
+  </footer>
+</body>
+</html>
