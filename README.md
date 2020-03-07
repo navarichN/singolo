@@ -1,1 +1,1 @@
-# [singolo](https://navarichn.github.io/singolo/singolo.html)
+# [singolo](https://navarichn.github.io/singolo/)
