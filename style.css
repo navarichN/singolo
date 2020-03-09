@@ -449,7 +449,6 @@ input {
   width: 604px;
   padding-left: 15px;
   letter-spacing: 0.5px;
-  line-height: 0.4;
 }
 
 .form__button:hover, input:hover, textarea:hover {
@@ -467,6 +466,10 @@ input::placeholder, textarea::placeholder {
   line-height: 1;
   word-spacing: -0.1px;
   letter-spacing: 0.4px;
+}
+
+input::-moz-placeholder {
+  line-height: 3.1;
 }
 
 .form__button {
