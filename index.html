@@ -14,31 +14,50 @@
     </div>
     <nav>
       <ul class = "navigation">
-        <li class = "navigation__link_active"><a href = "#" class = "navigation__link">HOME</a></li>
-        <li><a href = "#" class = "navigation__link">SERVICES</a></li>
-        <li><a href = "#" class = "navigation__link">PORTFOLIO</a></li>
-        <li><a href = "#" class = "navigation__link">ABOUT</a></li>
-        <li><a href = "#" class = "navigation__link">CONTACT</a></li>
+        <li><a href = "#" class = "navigation__link navigation__link_active">HOME</a></li>
+        <li><a href = "#servises" class = "navigation__link">SERVICES</a></li>
+        <li><a href = "#portfolio" class = "navigation__link">PORTFOLIO</a></li>
+        <li><a href = "#about" class = "navigation__link">ABOUT</a></li>
+        <li><a href = "#contact" class = "navigation__link">CONTACT</a></li>
       </ul>
     </nav>
   </header>
   <main>
-    <section class = "slider">
+    <section class = "slider" id = "slide1">
       <div class = "slider-content">
         <div class = "slider-chev"><img src = "assets/img/part1/chev-left.png"></div>
         <div class = "slider__wrapper">
-          <div class = "iphone-vertical">
-            <img src = "assets/img/part1/vertical.png">
+          <div class = "iphone iphone-vertical">
+            <img src = "assets/img/part1/vertical.png" alt="iphone-vertical" class = "iphone-vertical iphone-vertical__img">
+            <img src="./assets/img/part1/vaertical-off.png" alt="iphone-vertical" class = "iphone-vertical iphone-vertical-off hide">
+            <button class = "iphone-btn iphone-vertical__btn"></button>
           </div>
-          <div class = "iphone-horizontal">
-            <img src = "assets/img/part1/horizontal.png">
+          <div class = "iphone iphone-horizontal">
+            <img src = "assets/img/part1/horizontal.png" alt="iphone-horizontal" class = "iphone-vertical iphone-horizontal__img">
+            <img src="./assets/img/part1/horizontal-off.png" alt="iphone-horizontal" class = "iphone-horizontal-off hide">
+            <button class = "iphone-btn iphone-horizontal__btn"></button>
           </div>
         </div>
         <div class = "slider-chev"><img src = "assets/img/part1/chev-right.png"></div>
       </div>
     </section>
 
-    <section class = "servises">
+    <section class = "slider hide" id = "slide2">
+      <div class = "slider-content">
+        <div class = "slider-chev"><img src = "assets/img/part1/chev-left.png"></div>
+        <div class = "slider__wrapper slider__wrapper_second">
+          <div class="three-iphones">
+            <img src="./assets/img/part1/telefons.png" alt="three-iphones" class = "two-iphones">
+            <img src="./assets/img/part1/telefon-front.png" alt="iphone-front" class = "iphone-front">
+            <img src="./assets/img/part1/front-off.png" alt="iphone-front-off.png" class ="iphone-front iphone-front-off hide">
+            <button class = "iphone-btn iphone-front__btn"></button>
+          </div>
+        </div>
+        <div class = "slider-chev"><img src = "assets/img/part1/chev-right.png"></div>
+      </div>
+    </section>
+
+    <section class = "servises" id = "servises">
       <h1 class = "title">Our Services</h1>
       <p class = "text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
 
@@ -119,11 +138,11 @@
       </div>
     </section>
 
-    <section class = "portfolio">
+    <section class = "portfolio" id = "portfolio">
       <h2 class = "title">Portfolio</h2>
       <p class = "text">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
       <div class="portfolio__tag-buttons">
-        <button class = "tag-btn tag-btn_active" autofocus>All</button>
+        <button class = "tag-btn">All</button>
         <button class = "tag-btn">Web Design</button>
         <button class = "tag-btn">Graphic Design</button>
         <button class = "tag-btn">Artwork</button>
@@ -133,23 +152,19 @@
         <img src="./assets/img/part2/goodsmile.png" alt="good smile" width = "220px" height = "187px">
         <img src="./assets/img/part2/abstract.png" alt="abstract" width = "220px" height = "187px">
         <img src="./assets/img/part2/ironman.png" alt="ironman" width = "220px" height = "187px">
-      </div>
-      <div class="layout-4-column">
         <img src="./assets/img/part2/hares.png" alt="hares" width = "220px" height = "187px">
         <img src="./assets/img/part2/sdk.png" alt="sdk" width = "220px" height = "187px">
         <img src="./assets/img/part2/telepuziki.png" alt="telepuziki" width = "220px" height = "187px">
         <img src="./assets/img/part2/chiks.png" alt="chicks" width = "220px" height = "187px">
-                
-      </div>
-      <div class="layout-4-column">
         <img src="./assets/img/part2/greenmonstr.png" alt="green monster" width = "220px" height = "187px">
         <img src="./assets/img/part2/words.png" alt="words" width = "220px" height = "187px">
         <img src="./assets/img/part2/scarysmile.png" alt="scary smile" width = "220px" height = "187px">
         <img src="./assets/img/part2/envelope.png" alt="envelope" width = "220px" height = "187px">
       </div>
+
     </section>
 
-    <section class = "about">
+    <section class = "about" id = "about">
       <h2 class = "title">About Us</h2>
       <p class = "text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>  
       <div class="layout-3-column about__layout-3-column">
@@ -201,21 +216,35 @@
       </div>      
     </section>
 
-    <section class = "quote">
+    <section class = "quote" id = "contact">
       <h2 class = "title">Get a Quote</h2>
       <p class = "text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
       <div class="quote__wrapper">
-        <form action="singolo.html" target="_blank" method="POST">
+        <form name = "quote__form">
             <label for="username"></label>
             <input type="text" name="username" id="username" placeholder="Name (Required)" required maxlength = "10" minlength = "3"> 
             <label for="email"></label>
-            <input type="email" name="email" id="email" placeholder="Email (Required)" required maxlength = "30" minlength = "12">
+            <input type="email" name="email" id="email" placeholder="Email (Required)" required maxlength = "30" minlength = "5">
             <label for="subject"></label>
             <input type="subject" name="subject" id="subject" placeholder="Subject">
             <label for="describe"></label>
             <textarea name="describe" id="describe" cols="80" rows="10" placeholder="Describe your project in detail..."></textarea>
-            <button class = "form__button" type="submit">Submit</button>
-          </form>
+            <button class = "form__button">Submit</button>
+        </form>
+        <div class = "modal-window">
+          <div class = "modal-window__content">
+            <span class = "message">Письмо отправлено</span>
+            <div class = "modal-window__title">
+              <h3>Тема:</h3>
+              <p class = "theme"> Без темы</p>
+            </div>
+            <div class = "modal-window__description">
+              <h3>Описание:</h3>
+              <p class = "descr"> Без описания</p>
+            </div>
+            <button class = "modal__btn">Ok</button>
+          </div>
+        </div>
           <div class="contact-info">
             <h3 class = "contact-info__title">Contact Information</h3>
             <p class = "contact-info__text">Quisque hendrerit purus dapibus, ornare nibh vitae, viver-<br>ra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. 
@@ -242,5 +271,6 @@
       </div>
     </footer>
   </main>
+  <script src ="script.js"></script>
 </body>
 </html>
