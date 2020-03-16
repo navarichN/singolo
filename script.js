@@ -241,6 +241,7 @@ function hideModal() {
 function showModalWindow() {
     showModalBlur();
     modalWindow.style.position = "fixed";
+    modalWindow.style.height = "100%"
     modalWindow.style.top = "15%";
     modalWindow.style.display = "flex";
     modalWindowContent.style.display = "flex";
