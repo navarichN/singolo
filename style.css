@@ -514,7 +514,7 @@ main {
 }
 
 .modal-window {
-  display: flex;
+  display: none;
   justify-content: center;
   position: absolute;
   top: 700px;
