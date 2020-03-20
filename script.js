@@ -6,12 +6,22 @@ let btnServises = document.querySelectorAll('.navigation__link')[1];
 let btnPortfolio = document.querySelectorAll('.navigation__link')[2];
 let btnAbout = document.querySelectorAll('.navigation__link')[3];
 let btnContact = document.querySelectorAll('.navigation__link')[4];
+let sections = document.querySelectorAll('main > section');
+const links = document.querySelectorAll('.navigation__link');
+document.addEventListener('scroll', onScroll);
+function onScroll(event) {
+    const curPos = window.scrollY;
 
-function activator(event) {
-    navButtons.forEach(el =>
-        el.classList.remove("navigation__link_active")
-    );
-    event.target.classList.add("navigation__link_active");
+    sections.forEach( el => {
+        if(el.offsetTop - 160 <= curPos && (el.offsetTop + el.offsetHeight - 160) > curPos) {
+            links.forEach( a => {
+                a.classList.remove('navigation__link_active');
+                if(el.getAttribute('id') === a.getAttribute('href').substring(1)) {
+                    a.classList.add('navigation__link_active');
+                }
+            })
+        }
+    });
 }
 
 btnHome.addEventListener("click", activator);
@@ -209,6 +219,14 @@ tagArtwork.addEventListener("click", () => {
 
 
 //modal
+
+function activator(event) {
+    
+    navButtons.forEach(el =>
+        el.classList.remove("navigation__link_active")
+    );
+    event.target.classList.add("navigation__link_active");
+}
 
 let quoteForm = document.forms.quote__form;
 let btnCloseModal = document.querySelector('.modal__btn');
