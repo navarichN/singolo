@@ -9,51 +9,56 @@
 </head>
 <body>
   <header>
-    <div class = "logo">
-      <h1 class = "logo__text">SINGOLO</h1>
-    </div>
-    <nav>
-      <ul class = "navigation">
-        <li><a href = "#" class = "navigation__link navigation__link_active">HOME</a></li>
-        <li><a href = "#servises" class = "navigation__link">SERVICES</a></li>
-        <li><a href = "#portfolio" class = "navigation__link">PORTFOLIO</a></li>
-        <li><a href = "#about" class = "navigation__link">ABOUT</a></li>
-        <li><a href = "#contact" class = "navigation__link">CONTACT</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section class = "slider" id = "slide1">
-      <div class = "slider-content">
-        <div class = "slider-chev"><img src = "assets/img/part1/chev-left.png"></div>
-        <div class = "slider__wrapper">
-          <div class = "iphone iphone-vertical">
-            <img src = "assets/img/part1/vertical.png" alt="iphone-vertical" class = "iphone-vertical iphone-vertical__img">
-            <img src="./assets/img/part1/vaertical-off.png" alt="iphone-vertical" class = "iphone-vertical iphone-vertical-off hide">
-            <button class = "iphone-btn iphone-vertical__btn"></button>
-          </div>
-          <div class = "iphone iphone-horizontal">
-            <img src = "assets/img/part1/horizontal.png" alt="iphone-horizontal" class = "iphone-vertical iphone-horizontal__img">
-            <img src="./assets/img/part1/horizontal-off.png" alt="iphone-horizontal" class = "iphone-horizontal-off hide">
-            <button class = "iphone-btn iphone-horizontal__btn"></button>
-          </div>
-        </div>
-        <div class = "slider-chev"><img src = "assets/img/part1/chev-right.png"></div>
+    <div class="header-content">
+      <div class = "logo">
+        <h1 class = "logo__text">SINGOLO</h1>
       </div>
-    </section>
+      <nav>
+        <ul class = "navigation">
+          <li><a href = "#home" class = "navigation__link navigation__link_active">HOME</a></li>
+          <li><a href = "#servises" class = "navigation__link">SERVICES</a></li>
+          <li><a href = "#portfolio" class = "navigation__link">PORTFOLIO</a></li>
+          <li><a href = "#about" class = "navigation__link">ABOUT</a></li>
+          <li><a href = "#contact" class = "navigation__link">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+    </header>
+    
 
-    <section class = "slider hide" id = "slide2">
-      <div class = "slider-content">
-        <div class = "slider-chev"><img src = "assets/img/part1/chev-left.png"></div>
-        <div class = "slider__wrapper slider__wrapper_second">
-          <div class="three-iphones">
-            <img src="./assets/img/part1/telefons.png" alt="three-iphones" class = "two-iphones">
-            <img src="./assets/img/part1/telefon-front.png" alt="iphone-front" class = "iphone-front">
-            <img src="./assets/img/part1/front-off.png" alt="iphone-front-off.png" class ="iphone-front iphone-front-off hide">
-            <button class = "iphone-btn iphone-front__btn"></button>
+  <main>
+    <section id = "home">
+      <div class = "slider" id = "slide1">
+        <div class = "slider-content">
+          <div class = "slider-chev"><img src = "assets/img/part1/chev-left.png"></div>
+          <div class = "slider__wrapper">
+            <div class = "iphone iphone-vertical">
+              <img src = "assets/img/part1/vertical.png" alt="iphone-vertical" class = "iphone-vertical iphone-vertical__img">
+              <img src="./assets/img/part1/vaertical-off.png" alt="iphone-vertical" class = "iphone-vertical iphone-vertical-off hide">
+              <button class = "iphone-btn iphone-vertical__btn"></button>
+            </div>
+            <div class = "iphone iphone-horizontal">
+              <img src = "assets/img/part1/horizontal.png" alt="iphone-horizontal" class = "iphone-vertical iphone-horizontal__img">
+              <img src="./assets/img/part1/horizontal-off.png" alt="iphone-horizontal" class = "iphone-horizontal-off hide">
+              <button class = "iphone-btn iphone-horizontal__btn"></button>
+            </div>
           </div>
+          <div class = "slider-chev"><img src = "assets/img/part1/chev-right.png"></div>
         </div>
-        <div class = "slider-chev"><img src = "assets/img/part1/chev-right.png"></div>
+      </div>
+      <div class = "slider hide" id = "slide2">
+        <div class = "slider-content">
+          <div class = "slider-chev"><img src = "assets/img/part1/chev-left.png"></div>
+          <div class = "slider__wrapper slider__wrapper_second">
+            <div class="three-iphones">
+              <img src="./assets/img/part1/telefons.png" alt="three-iphones" class = "two-iphones">
+              <img src="./assets/img/part1/telefon-front.png" alt="iphone-front" class = "iphone-front">
+              <img src="./assets/img/part1/front-off.png" alt="iphone-front-off.png" class ="iphone-front iphone-front-off hide">
+              <button class = "iphone-btn iphone-front__btn"></button>
+            </div>
+          </div>
+          <div class = "slider-chev"><img src = "assets/img/part1/chev-right.png"></div>
+        </div>
       </div>
     </section>
 
@@ -257,20 +262,23 @@
           </div>
       </div>
     </section>
-
-    <footer>
+  </main>
+  
+  <footer>
+    <div class="footer-content">
       <div class="copyright">
         <h3>© Copyright 2013</h3><h3>by PSDchat.com</h3>
       </div>
-
+  
       <div class = "social footer__social">
         <a href="#" class = "social-link social-link__facebook"></a>
         <a href="#" class = "social-link social-link__google"></a>
         <a href="#" class = "social-link social-link__twitter"></a>
         <a href="#" class = "social-link social-link__linkedin"></a>
       </div>
-    </footer>
-  </main>
+    </div>
+
+  </footer>
   <script src ="script.js"></script>
 </body>
 </html>
