@@ -50,7 +50,9 @@ btnLeftOne.addEventListener("click", () => {
         "showRight 0.4s linear";
       setTimeout(function() {
         slideTwo.classList.remove("hide");
+        slideTwo.style.display = "flex";
         slideOne.classList.add("hide");
+        slideOne.style.display = "none";
       }, 300);        
     }
 }); 
@@ -63,7 +65,9 @@ btnLeftTwo.addEventListener("click", () => {
         "showRight 0.4s ease";
       setTimeout(function() {
         slideOne.classList.remove("hide");
+        slideOne.style.display = "flex";
         slideTwo.classList.add("hide");
+        slideTwo.style.display = "none";
       }, 300);
     } 
 }); 
@@ -74,7 +78,9 @@ btnRigthOne.addEventListener("click", () => {
         slideTwo.style.animation = "showLeft 0.4s ease";
       setTimeout(function() {
         slideTwo.classList.remove("hide");
+        slideTwo.style.display = "flex";
         slideOne.classList.add("hide");
+        slideOne.style.display = "none";
       }, 300);        
     }
 });
@@ -85,7 +91,9 @@ btnRigthTwo.addEventListener("click", () => {
         slideOne.style.animation = "showLeft 0.4s ease";
       setTimeout(function() {
         slideOne.classList.remove("hide");
+        slideOne.style.display = "flex";
         slideTwo.classList.add("hide");
+        slideTwo.style.display = "none";
       }, 300);
     } 
 }); 
