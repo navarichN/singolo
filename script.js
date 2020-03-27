@@ -248,7 +248,7 @@ let subject = quoteForm.elements.subject;
 let desribe = quoteForm.elements.describe;
 let modalWindow = document.querySelector('.modal-window');
 let modalWindowContent = document.querySelector('.modal-window__content');
-
+let menuToggle = document.getElementById('menu-toggle');
 
 
 function showModalBlur() {
@@ -261,7 +261,7 @@ function showModalBlur() {
 function hideModal() {
     document.body.style.overflowY = '';
     modalWindow.style.display = "none";
-    document.querySelector("#modal-blur").remove();
+    document.getElementById("modal-blur").remove();
 }
 
 function showModalWindow() {
@@ -286,3 +286,13 @@ btnForm.addEventListener("click", (event) => {
 btnCloseModal.addEventListener("click", () =>{
     hideModal();
 })
+
+menuToggle.addEventListener("click", () => {
+    if (menuToggle.checked) {
+		showModalBlur()
+	}
+	else if(!menuToggle.checked) {
+        document.querySelector('.menu-box').style.animation = "hideLeft 0.4s ease";
+        document.getElementById("modal-blur").remove();
+	}
+});
