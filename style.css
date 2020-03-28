@@ -82,8 +82,8 @@ header {
   align-items: center;
   justify-content: space-around;
   position: relative;
-  top: 15px;
-  left: 10px;
+  top: 10px;
+  left: 5px;
   width: 36px;
   height: 30px;
   cursor: pointer;
@@ -196,6 +196,7 @@ header {
   padding-top: 2px;
   height: 100%;
   margin-left: 40px;
+  z-index: 5;
 }
 
 .logo__text {
@@ -294,7 +295,7 @@ main {
 .slider {
   height: 594px;
   overflow: hidden;
-  width: 100%;
+  max-width: 1020px;
 }
 
 .hide {
@@ -421,8 +422,8 @@ main {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  margin: 47px 42px 0 0;
-  width: 942px;
+  margin: 47px 0 0 0;
+  max-width: 942px;
 }
 
 .servises-item {
@@ -431,10 +432,10 @@ main {
 }
 
 .servises-item__description {
-  width: 221px;
-  margin-left: 17px;
+  max-width: 221px;
+  margin-left: 10px;
   margin-bottom: 35px;
-  margin-right: 17px;
+  margin-right: 10px;
 }
 
 .servises-item__title {
@@ -542,8 +543,13 @@ main {
 .about__layout-3-column {
   display: flex;
   flex-direction: row;
-  width: 942px;
+  max-width: 942px;
   margin-top: 45px;
+}
+
+.person-card img {
+  width: 100%;
+  height: auto;
 }
 
 .person-card:nth-child(2) {
@@ -703,7 +709,7 @@ form {
   justify-content: space-between;
   align-items: center;
   margin-top: 36px;
-  width: 619px;
+  width: 80%;
   height: 416px;
   color: #ffffff;
   z-index: 1;
@@ -711,7 +717,8 @@ form {
 
 input {
   height: 36px;
-  width: 604px;
+  max-width: 604px;
+  width: 100%;
   padding-left: 15px;
   letter-spacing: 0.5px;
   line-height: 0.4;
@@ -746,7 +753,8 @@ input::placeholder, textarea::placeholder {
 textarea {
   height: 188px;
   resize: none;
-  width: 602px;
+  max-width: 602px;
+  width: 100%;
   padding-left: 15px;
   padding-top: 12px;
   line-height: 0.9;
@@ -757,11 +765,12 @@ textarea {
 .quote__wrapper {
   display: flex;
   flex-direction: row;
-  width: 943px;
+  max-width: 936px;
 }
 
 .contact-info {
-  margin: 41px 0 0 21px ;
+  max-width: 350px;
+  margin: 41px 0 0 20px ;
 }
 
 .contact-info__title {
@@ -822,7 +831,7 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   margin: 0 auto;
-  width: 1020px;
+  max-width: 1020px;
   height: 76px;
 }
 
@@ -906,10 +915,19 @@ footer {
   }
 }
 
-@media (max-width: 768px) and (min-width: 375px) {
+@media (max-width: 1020px){
   body {
-    width: 768px;
+    max-width: 1020px;
+  }
+  main{
     width: 100%;
+  } 
+}
+
+@media (max-width: 768px) and (min-width: 376px) {
+  body {
+    max-width: 768px;
+    max-width: 100%;
   }
   
   header {
@@ -917,7 +935,7 @@ footer {
   }
   
   .header-content {
-    width: 768px;
+    max-width: 768px;
   }
 
   main {
@@ -927,12 +945,14 @@ footer {
     max-width: 768px;
     
   }
+
   .slider {
     max-width: 768px;
     height: 452px;
   }
+
   .slider-content {
-    width: 713px;
+    max-width: 713px;
     height: 452px;
   }
 
@@ -1016,9 +1036,8 @@ footer {
   }
 
   .layout-3-column {
-    width: 687px;
+    max-width: 687px;
     height: 376px;
-    flex-wrap: wrap;
     justify-content: space-around;
   }
 
@@ -1033,7 +1052,7 @@ footer {
   }
 
   .layout-4-column img {
-    width: 206.19px;
+    max-width: 206.19px;
     height: 177.76px;
   }
 
@@ -1043,12 +1062,14 @@ footer {
   }
 
   .about__layout-3-column  img {
-    width: 218.94px;
-    height: 218.94px;
+    max-width: 218.94px;
+    width: 100%;
+    height: auto;
   }
 
   .about__layout-3-column {
-    width: 687px;
+    max-width: 687px;
+    width: 100%;
   }
 
   .person-card {
@@ -1069,7 +1090,7 @@ footer {
   }
 
   form, input, textarea {
-    width: 441px;
+    max-width: 441px;
   }
 
   textarea {
@@ -1077,11 +1098,11 @@ footer {
   }
 
   .quote__wrapper {
-    width: 694px;
+    max-width: 694px;
   }
 
   .contact-info {
-    width: 220px;
+    max-width: 220px;
   }
 
   .footer-content {
@@ -1096,23 +1117,29 @@ footer {
 
 @media (max-width: 375px) {
   body {
-    max-width: 375px;
     width: 100%;
   }
   
   header {
     max-width: 375px;
+    height: 71px;
   }
   
   .header-content {
-    width: 375px;
+    max-width: 375px;
+    height: 71px;
   }
 
   .burger-menu {
     display: block;
   }
 
-  .logo__text{
+  .logo {
+    margin-left: 80px;
+    margin-top: 5px;
+  }
+
+  .logo__text {
     font-size: 19.6875px;
     line-height: 24px;
     letter-spacing: -0.03em;
@@ -1126,7 +1153,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 375px;
+    max-width: 375px;
     margin: 0;
   }
 
@@ -1230,6 +1257,7 @@ footer {
     flex-wrap: wrap;
     justify-content: space-around;
   }
+  
   .servises-item__text {
     width: 220px;
   }
@@ -1237,7 +1265,7 @@ footer {
   .portfolio {
     max-width: 375px;
     height: 1060px;
-    padding: 34px 10px 0 10px;
+    padding: 34px 17px 0 10px;
     border-right: 10px solid #2d303a;
     border-left: 10px solid #2d303a;
   }
@@ -1247,7 +1275,7 @@ footer {
   }
 
   .layout-4-column img {
-    margin: 5px;
+    margin: 7px;
     width: 151px;
     height: 128px;
   }
@@ -1259,7 +1287,7 @@ footer {
   }
 
   .about__layout-3-column  img {
-    width: 310px;
+    width: 314px;
     height: 310px;
   }
 
@@ -1330,6 +1358,10 @@ footer {
   textarea {
     width: 300px;
     height: 159px;
+  }
+
+  .form__button {
+    width: 317px;
   }
 
   .quote__wrapper {

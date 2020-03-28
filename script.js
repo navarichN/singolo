@@ -8,7 +8,27 @@ let btnAbout = document.querySelectorAll('.navigation__link')[3];
 let btnContact = document.querySelectorAll('.navigation__link')[4];
 let sections = document.querySelectorAll('main > section');
 const links = document.querySelectorAll('.navigation__link');
+
+let boxMenuButtons = document.querySelectorAll('.menu-box__item');
+let boxMenuHome = document.querySelectorAll('.menu-box__item')[0];
+let boxMenuServises = document.querySelectorAll('.menu-box__item')[1];
+let boxMenuPortfolio = document.querySelectorAll('.menu-box__item')[2];
+let boxMenuAbout = document.querySelectorAll('.menu-box__item')[3];
+let boxMenuContact = document.querySelectorAll('.menu-box__item')[4];
+
 document.addEventListener('scroll', onScroll);
+
+function activator(event) {
+    
+    navButtons.forEach(el =>
+        el.classList.remove("navigation__link_active")
+    );
+    boxMenuButtons.forEach(el =>
+        el.classList.remove("navigation__link_active")
+    );
+    event.target.classList.add("navigation__link_active");
+}
+
 function onScroll(event) {
     const curPos = window.scrollY;
 
@@ -29,6 +49,12 @@ btnServises.addEventListener("click", activator);
 btnPortfolio.addEventListener("click", activator);
 btnAbout.addEventListener("click", activator);
 btnContact.addEventListener("click", activator);
+
+boxMenuHome.addEventListener("click", activator);
+boxMenuServises.addEventListener("click", activator);
+boxMenuPortfolio.addEventListener("click", activator);
+boxMenuAbout.addEventListener("click", activator);
+boxMenuContact.addEventListener("click", activator);
 
 
 // slider
@@ -228,14 +254,6 @@ tagArtwork.addEventListener("click", () => {
 
 //modal
 
-function activator(event) {
-    
-    navButtons.forEach(el =>
-        el.classList.remove("navigation__link_active")
-    );
-    event.target.classList.add("navigation__link_active");
-}
-
 let quoteForm = document.forms.quote__form;
 let btnCloseModal = document.querySelector('.modal__btn');
 let btnForm = document.querySelector('.form__button');
@@ -249,7 +267,7 @@ let desribe = quoteForm.elements.describe;
 let modalWindow = document.querySelector('.modal-window');
 let modalWindowContent = document.querySelector('.modal-window__content');
 let menuToggle = document.getElementById('menu-toggle');
-
+let menuBox = document.getElementById('.menu-box');
 
 function showModalBlur() {
     let modalBlur = document.createElement('div');
@@ -262,6 +280,7 @@ function hideModal() {
     document.body.style.overflowY = '';
     modalWindow.style.display = "none";
     document.getElementById("modal-blur").remove();
+    quoteForm.reset();
 }
 
 function showModalWindow() {
@@ -289,10 +308,14 @@ btnCloseModal.addEventListener("click", () =>{
 
 menuToggle.addEventListener("click", () => {
     if (menuToggle.checked) {
+        document.querySelector('.logo').style.marginLeft = "11px";
 		showModalBlur()
 	}
 	else if(!menuToggle.checked) {
         document.querySelector('.menu-box').style.animation = "hideLeft 0.4s ease";
         document.getElementById("modal-blur").remove();
+        document.body.style.overflowY = '';
+        document.querySelector('.logo').style.marginLeft = "80px"
 	}
 });
+
